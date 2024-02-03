@@ -8,10 +8,24 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        "global-white": "#FCFCFC",
+        "text-gray": "#707070",
+        "light-gray": "#EEEEEE",
+        "transparent-blue": "rgba(23, 37, 84, 0.7)",
+        "transparent-orange": "rgba(255,115,0, 0.5)",
+        "text-blue": "#2A86E5",
+        "text-teal": "#0DD0BA",
+      },
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        "gradient-blue": "linear-gradient(to right, #06b6d4, #3b82f6)",
+        "gradient-white": "linear-gradient(to right, white, white)",
+        "gradient-red": "linear-gradient(to bottom, orange, red);",
+        "theme-background": "url(/icons/sun.svg)",
+        banner: "url(/images/game-banner.png)",
+      },
+      boxShadow: {
+        "banner-shadow": "0 8px 30px 0 rgba(27, 161, 194, 0.1)",
       },
     },
   },
