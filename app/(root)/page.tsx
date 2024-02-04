@@ -1,6 +1,8 @@
 import Banner from "@/components/shared/main/Banner";
 import Breadcrumbs from "@/components/shared/main/Breadcrumbs";
 import ArticleCard from "@/components/shared/main/ArticleCard";
+import Ads from "@/components/shared/main/Ads";
+import SocialPanel from "@/components/shared/main/SocialPanel";
 
 export default function Home() {
   const linksArr = [
@@ -43,17 +45,18 @@ export default function Home() {
 
   return (
     <>
+      <SocialPanel />
       <section>
         <Banner />
       </section>
-      <section className="mt-[46px] flex items-start px-[20px] xl:px-0">
+      <section className="mt-[20px] md:mt-[46px] flex items-start px-[15px] md:px-[20px] xl:px-0">
         <div className="flex flex-col">
           <Breadcrumbs linksArr={linksArr} />
           <article>
-            <h1 className="bg-gradient-blue text-gradient text-[42px] font-bold">
+            <h1 className="bg-gradient-blue text-gradient text-[35px] md:text-[42px] font-bold text-center md:text-left">
               Lorem Ipsum is simply dummy
             </h1>
-            <p className="text-[20px] text-text-gray">
+            <p className="text-[20px] text-text-gray dark:text-white">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
@@ -67,10 +70,13 @@ export default function Home() {
             </p>
           </article>
           <div className="mt-[70px]">
-            <h2 className="text-xl font-bold text-text-gray mb-5">
-              Similar Articles
-            </h2>
-            <div className="flex flex-wrap gap-5">
+            <div className="mb-5">
+              <h2 className="text-xl font-bold text-text-gray dark:text-white">
+                Similar Articles
+              </h2>
+              <span className="inline-block bg-gradient-blue w-[43px] h-[8px] rounded-[20px]"></span>
+            </div>
+            <div className="flex flex-wrap gap-5 flex-col items-center md:flex-row">
               {articlesInfo?.map((article, index) => (
                 <ArticleCard
                   title={article.title}
@@ -82,17 +88,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="relative ml-[60px] rounded-[20px] bg-gradient-red">
-          <img
-            src="/images/ads.png"
-            alt="promoted"
-            className="min-w-[300px] h-[600px]"
-          />
-          <div className="text-white absolute left-0 top-0 rounded-[20px] min-w-[300px] h-[600px] flex flex-col justify-center items-center">
-            <span className="text-[60px] font-bold">ADS</span>
-            <span className="text-[40px] font-bold">300x600</span>
-          </div>
-        </div>
+        <Ads />
       </section>
     </>
   );

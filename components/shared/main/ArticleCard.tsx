@@ -11,15 +11,17 @@ const ArticleCard = ({ title, author, date }: ArticleCardProps) => {
   return (
     <Link
       href="/"
-      className="bg-white p-5 rounded-[20px] flex flex-col items-center"
+      className="bg-white p-5 rounded-[20px] flex flex-col items-center dark:bg-dark-gray"
     >
       <img
         src="/images/media-pic.png"
         alt="lorem ipsum cover"
-        className="w-[347px] h-[171px] rounded-[20px] mb-5"
+        className="w-[310px] xl:w-[347px] h-[171px] rounded-[20px] mb-5"
       />
-      <h3 className="text-text-blue text-[22px] font-bold">{title}</h3>
-      <div className="flex gap-8">
+      <h3 className="text-text-blue text-[22px] font-bold w-[310px] text-center xl:w-auto">
+        {title}
+      </h3>
+      <div className="flex gap-8 mt-1">
         <div className="flex items-center gap-1">
           <svg
             width="13"

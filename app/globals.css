@@ -6,29 +6,39 @@ body{
     background-color: rgba(246, 245, 245, 0.59);
 }
 
-.dark-theme{
-    background-color: #0E1219;
-}
-
-._opened{
-  display: flex !important;
-}
-
-@media scree and (max-width: 1280px){
-    .text-gradient-media{
-        -webkit-text-fill-color: transparent;
-    }
-}
-
-.text-gradient{
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-
 @layer utilities {
     .inner-wrapper{
         @apply max-w-[1170px] w-full
+    }
+
+    @media scree and (max-width: 1280px){
+        .text-gradient-media{
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .text-gradient{
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    ._opened{
+        display: flex !important;
+    }
+
+    .progress-bar {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background:
+                radial-gradient(closest-side, #0E1219 79%, transparent 80%),
+                conic-gradient(orange 50%, red 80%,  rgba(8, 12, 24, 0.7) 0);
+    }
+
+    .gradient-overlay {
+        height: 100%;
+        background: linear-gradient(to right, #f55d0b, #fde047);
+        transition: width 0.3s ease-in-out;
     }
 }
 

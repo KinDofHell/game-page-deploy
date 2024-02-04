@@ -6,9 +6,11 @@ import ThemeSwitcher from "@/components/shared/header/ThemeSwitcher";
 
 const UpperBar = () => {
   return (
-    <div className="bg-gradient-blue flex items-center justify-center p-3 px-[20px] xl:px-3">
+    <div
+      className={`bg-gradient-blue flex items-center justify-center p-3 px-[20px] xl:px-3`}
+    >
       <div className="inner-wrapper flex items-center justify-between">
-        <nav className="hidden gap-6 md:flex">
+        <nav className="hidden md:flex gap-6 text-white">
           <MenuItem label="Menu item 1" iconType="MOBILE" />
           <MenuItem label="Menu item 2" iconType="FILTER" />
           <MenuItem label="Menu item 3" iconType="ANDROID" />

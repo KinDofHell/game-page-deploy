@@ -5,12 +5,12 @@ import FooterList from "@/components/shared/footer/FooterList";
 
 const Footer = () => {
   return (
-    <footer className="w-full p-5 pt-[150px] xl:p-[28px] bg-white">
-      <div className="w-full flex justify-center bg-gradient-blue rounded-[40px] px-[30px]">
+    <footer className="w-full p-5 pt-0 xl:p-[28px] bg-white dark:bg-main-dark">
+      <div className="w-full flex justify-center bg-gradient-blue rounded-[40px] px-5 xl:px-[30px]">
         <div className="inner-wrapper py-5 flex flex-col items-center gap-14 xl:flex-row">
-          <div className="flex flex-col items-center w-full rounded-[20px] bg-white p-[30px] xl:w-[351px]">
-            <h2 className="text-[30px] my-11">LOGOTYPE</h2>
-            <div className="text-text-teal flex flex-col items-center xl:items-start">
+          <div className="flex flex-col items-center w-full rounded-[20px] bg-white p-[30px] xl:w-[351px] dark:bg-dark-gray">
+            <h2 className="text-[30px] my-11 dark:text-white">LOGOTYPE</h2>
+            <div className="text-text-teal flex flex-col items-center xl:items-start dark:text-white">
               <p className="mb-4">Lorem Ipsum is simply dummy</p>
               <p className="text-center xl:text-left">
                 when an unknown printer took a galley of type and scrambled it

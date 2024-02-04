@@ -7,7 +7,7 @@ type LinksArr = {
 
 const Breadcrumbs = ({ linksArr }: { linksArr: LinksArr[] }) => {
   return (
-    <nav className="flex gap-2 text-text-gray">
+    <nav className="flex gap-2 text-text-gray justify-center flex-wrap md:justify-start">
       {linksArr?.map((link, index) => (
         <div key={index} className="flex items-center">
           <Link

@@ -5,7 +5,7 @@ const MainMenuItems = () => {
   const itemStyle = "text-[#2A86E5] text-[18px]";
 
   return (
-    <nav className="hidden gap-7 xl:flex">
+    <nav className="flex gap-[60px] xl:gap-7 flex-col items-center xl:flex-row mt-[75px] xl:mt-0">
       <Link href="/" className={itemStyle}>
         Item
       </Link>

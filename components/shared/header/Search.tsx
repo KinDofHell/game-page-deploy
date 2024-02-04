@@ -1,12 +1,18 @@
 import React from "react";
 
-const Search = ({ placeholder }: { placeholder: string }) => {
+const Search = ({
+  placeholder,
+  inputClassName,
+}: {
+  placeholder: string;
+  inputClassName?: string;
+}) => {
   return (
     <div className="relative">
       <input
         type="text"
         placeholder={placeholder}
-        className="bg-light-gray border-0 rounded-[40px] px-5 py-2.5"
+        className={`bg-light-gray border-0 rounded-[40px] px-5 py-2.5 dark:bg-dark-blue dark:text-white placeholder:dark:text-white ${inputClassName}`}
       />
       <img
         src="/icons/search.svg"
